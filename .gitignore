@@ -1,0 +1,43 @@
+# .NET build artifacts
+bin/
+obj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# NuGet packages
+*.nupkg
+packages/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+
+# Visual Studio code coverage results
+*.coverage
+*.coveragexml
+
+# Build cache directory
+.nuget/
+
+# Resharper files
+_ReSharper*/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# User-specific files
+*.userprefs
+*.suo
+*.sln.docstates.user
+
+# Build results of an older build system
+x64/
+x86/
+AnyCPU/
+Debug/
+Release/
