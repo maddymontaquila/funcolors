@@ -22,4 +22,14 @@ public static class FunColor
     public static Color PowerRangersRed => Color.FromUint(0xFFFF0000);
     public static Color TeenageMutantNinjaTurtlesGreen => Color.FromUint(0xFF008000);
     public static Color CareBearsRainbow => Color.FromUint(0xFFFF69B4);
+
+    // PC Manufacturer Colors from `70s and `80s
+    public static Color AppleIIBeige => Color.FromUint(0xFFD3D3D3);
+    public static Color Commodore64Brown => Color.FromUint(0xFF6C4F3D);
+    public static Color Atari800Blue => Color.FromUint(0xFF0057A0);
+    public static Color IBMPCGray => Color.FromUint(0xFF808080);
+    public static Color TRS80Silver => Color.FromUint(0xFFC0C0C0);
+    public static Color ZXSpectrumBlack => Color.FromUint(0xFF000000);
+    public static Color AmigaWhite => Color.FromUint(0xFFFFFFFF);
+    public static Color MSXBlue => Color.FromUint(0xFF0000FF);
 }
