@@ -5,6 +5,8 @@ APPARENTLY you can't just add new named colors to .NET MAUI. But who can remembe
 Current Colors:
 `DotNetPurple2024` (#512BD4)
 `XamarinBlue2011` (#5596D8)
+`AndroidBotGreen2024` (#A7CD45)
+
 
 To use this library, just add `using FunColors;` to your file (preferably your global usings, because we're modern here). Then, you can set the color anywhere using `FunColor.DotNetPurple2024` etc. You can also add `using static FunColors.FunColor;` if you want to type just the color name `DotNetPurple2024`.
 
