@@ -44,4 +44,7 @@ public static class FunColor
     /// Pairs best with PainfulRed, ensuring your design will never go unnoticed.
     /// </summary>
     public static Color ShrekGreen => Color.FromUint(0xFF009B00);
+
+    public static Color AndroidBotGreen2024 => Color.FromUint(0xFFA7CD45);
+
 }
