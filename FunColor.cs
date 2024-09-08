@@ -9,5 +9,6 @@ public static class FunColor
 
     public static Color XamarinBlue2011 => Color.FromUint(0xFF5596D8);
 
-    public static Color BratSummer => Color.FromUint(0xFF8ACE00);
+    public static Color BratAutumn => Color.FromUint(0xFFFF8C00);
+
 }
