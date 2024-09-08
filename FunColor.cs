@@ -1,13 +1,16 @@
-using Microsoft.Maui.Graphics;
+﻿using Microsoft.Maui.Graphics;
 
 namespace FunColors;
 
 // All the code in this file is included in all platforms.
 public static class FunColor
 {
+    // Brand colors
     public static Color DotNetPurple2024 => Color.FromUint(0xFF512BD4);
     public static Color XamarinBlue2011 => Color.FromUint(0xFF5596D8);
+    public static Color AndroidBotGreen2024 => Color.FromUint(0xFFA7CD45);
 
+    // Childhood toys
     public static Color RubberDuckYellow => Color.FromUint(0xFFFFD700);
     public static Color GameBoyGreen => Color.FromUint(0xFF9BBC0F);
     public static Color BarbiePink => Color.FromUint(0xFFDA1884);
@@ -34,10 +37,11 @@ public static class FunColor
     public static Color AmigaWhite => Color.FromUint(0xFFFFFFFF);
     public static Color MSXBlue => Color.FromUint(0xFF0000FF);
 
+    // CharliXCX 4 life
     public static Color BratSummer => Color.FromUint(0xFF8ACE00);
-
     public static Color BratAutumn => Color.FromUint(0xFFFF8C00);
 
+    // Neon and pain
     /// <summary>
     /// NeonElectricBlue is the color of a hyperactive blueberry that just discovered energy drinks.
     /// Pair with NeonVividMagenta to create a vibrant, energetic, panic-inducing color scheme.
@@ -72,7 +76,8 @@ public static class FunColor
     /// ShrekGreen is the color of a swamp-loving ogre who insists on keeping his lawn immaculate.
     /// Pairs best with PainfulRed, ensuring your design will never go unnoticed.
     /// </summary>
+
+    // shrek
     public static Color ShrekGreen => Color.FromUint(0xFF009B00);
 
-    public static Color AndroidBotGreen2024 => Color.FromUint(0xFFA7CD45);
 }
