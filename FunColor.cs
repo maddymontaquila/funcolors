@@ -15,7 +15,7 @@ public static class FunColor
     public static Color GameBoyGreen => Color.FromUint(0xFF9BBC0F);
     public static Color BarbiePink => Color.FromUint(0xFFDA1884);
     public static Color PotatoHeadBrown => Color.FromUint(0xFF8B4513);
-    public static Color TickleMeElmo => Color.FromUint(0xFFFF3F3F);
+    public static Color TickleMeElmoRed => Color.FromUint(0xFFFF3F3F);
     public static Color LegoRed => Color.FromUint(0xFFB40000);
     public static Color HotWheelsBlue => Color.FromUint(0xFF005BAC);
     public static Color NerfOrange => Color.FromUint(0xFFFF6F00);
