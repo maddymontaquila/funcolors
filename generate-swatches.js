@@ -65,4 +65,4 @@ function generateSwatches(hexColors, outputFile) {
 
 // Call the function to generate swatches
 const colors = extractColorsFromCsFile(csFilePath);
-generateSwatches(colors, 'color-swatches.png');
+generateSwatches(colors, 'assets/color-swatches.png');
