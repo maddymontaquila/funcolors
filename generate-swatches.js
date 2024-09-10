@@ -27,4 +27,4 @@ function generateSwatches(hexColors, outputFile) {
 }
 
 // Call the function to generate swatches
-generateSwatches(hexColors, 'color-swatches.png');
+generateSwatches(hexColors, 'assets/color-swatches.png');
