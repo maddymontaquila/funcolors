@@ -44,19 +44,20 @@ function truncateText(ctx, text, maxWidth) {
 // Function to generate swatches
 function generateSwatches(hexColors, outputFile) {
     const colorNames = Object.keys(colors);
-    const swatchRadius = 75;  // Radius of each round swatch
+    const swatchRadius = 50;  // Radius of each round swatch
     const swatchDiameter = swatchRadius * 2;
     const padding = 20; // Padding between swatches
+    const verticalPadding = 30; // Vertical padding between rows
     const maxPerRow = 5; // Maximum swatches per row
     const numRows = Math.ceil(colorNames.length / maxPerRow); // Calculate the number of rows
 
     const totalWidth = (swatchDiameter + padding) * maxPerRow - padding; // Adjust total width for padding
-    const totalHeight = (swatchDiameter + padding) * numRows + 50; // Add extra height for text
+    const totalHeight = (swatchDiameter + verticalPadding) * numRows + 50; // Add extra height for text and vertical padding
 
     const canvas = createCanvas(totalWidth, totalHeight);
     const ctx = canvas.getContext('2d');
 
-    ctx.font = '18px Arial';
+    ctx.font = '12px Arial';
     ctx.textAlign = 'center';
 
     // Loop through the colors and draw them as round swatches
@@ -65,7 +66,7 @@ function generateSwatches(hexColors, outputFile) {
         const row = Math.floor(index / maxPerRow); // Determine current row
         const col = index % maxPerRow; // Determine current column
         const x = col * (swatchDiameter + padding) + swatchRadius; // X position (center of circle)
-        const y = row * (swatchDiameter + padding) + swatchRadius; // Y position (center of circle)
+        const y = row * (swatchDiameter + verticalPadding) + swatchRadius; // Y position (center of circle)
 
         // Draw the round color swatch
         ctx.beginPath();
