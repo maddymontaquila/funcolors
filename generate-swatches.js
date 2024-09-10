@@ -32,12 +32,17 @@ function extractColorsFromCsFile(filePath) {
 
 // Function to generate swatches
 function generateSwatches(hexColors, outputFile) {
-    const colorNames = Object.keys(colors);
+      const colorNames = Object.keys(colors);
     const swatchWidth = 150;  // Width of each swatch
     const swatchHeight = 150; // Height of each swatch
     const padding = 20; // Padding between swatches
-    const totalWidth = (swatchWidth + padding) * colorNames.length;
-    const canvas = createCanvas(totalWidth, swatchHeight + 50); // Add extra space for color name text
+    const maxPerRow = 5; // Maximum swatches per row
+    const numRows = Math.ceil(colorNames.length / maxPerRow); // Calculate the number of rows
+
+    const totalWidth = (swatchWidth + padding) * maxPerRow - padding; // Adjust total width for padding
+    const totalHeight = (swatchHeight + padding) * numRows + 50; // Add extra height for text
+
+    const canvas = createCanvas(totalWidth, totalHeight);
     const ctx = canvas.getContext('2d');
 
     ctx.font = '18px Arial';
@@ -46,15 +51,18 @@ function generateSwatches(hexColors, outputFile) {
     // Loop through the colors and draw them as swatches
     colorNames.forEach((colorName, index) => {
         const colorHex = colors[colorName];
-        const x = index * (swatchWidth + padding);
-        
+        const row = Math.floor(index / maxPerRow); // Determine current row
+        const col = index % maxPerRow; // Determine current column
+        const x = col * (swatchWidth + padding);
+        const y = row * (swatchHeight + padding);
+
         // Draw the color swatch
         ctx.fillStyle = colorHex;
-        ctx.fillRect(x, 0, swatchWidth, swatchHeight);
+        ctx.fillRect(x, y, swatchWidth, swatchHeight);
 
         // Draw the color name below the swatch
         ctx.fillStyle = '#000';
-        ctx.fillText(colorName, x + swatchWidth / 2, swatchHeight + 25);
+        ctx.fillText(colorName, x + swatchWidth / 2, y + swatchHeight + 25);
     });
 
     // Save the canvas to an image file
