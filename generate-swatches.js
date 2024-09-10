@@ -43,7 +43,7 @@ function truncateText(ctx, text, maxWidth) {
 
 // Function to generate swatches
 function generateSwatches(hexColors, outputFile) {
-    const colorNames = Object.keys(colors);
+    const colorNames = Object.keys(colors).sort(); // Sort color names alphabetically
     const swatchRadius = 50;  // Radius of each round swatch
     const swatchDiameter = swatchRadius * 2;
     const padding = 20; // Padding between swatches
