@@ -44,10 +44,10 @@ function truncateText(ctx, text, maxWidth) {
 // Function to generate swatches
 function generateSwatches(hexColors, outputFile) {
     const colorNames = Object.keys(colors).sort(); // Sort color names alphabetically
-    const swatchRadius = 50;  // Radius of each round swatch
+    const swatchRadius = 36;  // Radius of each round swatch
     const swatchDiameter = swatchRadius * 2;
     const padding = 20; // Padding between swatches
-    const verticalPadding = 30; // Vertical padding between rows
+    const verticalPadding = 32; // Vertical padding between rows
     const maxPerRow = 5; // Maximum swatches per row
     const numRows = Math.ceil(colorNames.length / maxPerRow); // Calculate the number of rows
 
