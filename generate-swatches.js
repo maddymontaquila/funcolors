@@ -30,17 +30,28 @@ function extractColorsFromCsFile(filePath) {
     return colors;
 }
 
+// Helper function to truncate long text and add ellipses
+function truncateText(ctx, text, maxWidth) {
+    if (ctx.measureText(text).width <= maxWidth) {
+        return text;
+    }
+    while (ctx.measureText(text + '…').width > maxWidth) {
+        text = text.slice(0, -1);
+    }
+    return text + '…';
+}
+
 // Function to generate swatches
 function generateSwatches(hexColors, outputFile) {
-      const colorNames = Object.keys(colors);
-    const swatchWidth = 150;  // Width of each swatch
-    const swatchHeight = 150; // Height of each swatch
+    const colorNames = Object.keys(colors);
+    const swatchRadius = 75;  // Radius of each round swatch
+    const swatchDiameter = swatchRadius * 2;
     const padding = 20; // Padding between swatches
     const maxPerRow = 5; // Maximum swatches per row
     const numRows = Math.ceil(colorNames.length / maxPerRow); // Calculate the number of rows
 
-    const totalWidth = (swatchWidth + padding) * maxPerRow - padding; // Adjust total width for padding
-    const totalHeight = (swatchHeight + padding) * numRows + 50; // Add extra height for text
+    const totalWidth = (swatchDiameter + padding) * maxPerRow - padding; // Adjust total width for padding
+    const totalHeight = (swatchDiameter + padding) * numRows + 50; // Add extra height for text
 
     const canvas = createCanvas(totalWidth, totalHeight);
     const ctx = canvas.getContext('2d');
@@ -48,21 +59,27 @@ function generateSwatches(hexColors, outputFile) {
     ctx.font = '18px Arial';
     ctx.textAlign = 'center';
 
-    // Loop through the colors and draw them as swatches
+    // Loop through the colors and draw them as round swatches
     colorNames.forEach((colorName, index) => {
         const colorHex = colors[colorName];
         const row = Math.floor(index / maxPerRow); // Determine current row
         const col = index % maxPerRow; // Determine current column
-        const x = col * (swatchWidth + padding);
-        const y = row * (swatchHeight + padding);
+        const x = col * (swatchDiameter + padding) + swatchRadius; // X position (center of circle)
+        const y = row * (swatchDiameter + padding) + swatchRadius; // Y position (center of circle)
 
-        // Draw the color swatch
+        // Draw the round color swatch
+        ctx.beginPath();
+        ctx.arc(x, y, swatchRadius, 0, Math.PI * 2);
         ctx.fillStyle = colorHex;
-        ctx.fillRect(x, y, swatchWidth, swatchHeight);
+        ctx.fill();
+        ctx.closePath();
 
-        // Draw the color name below the swatch
+        // Truncate the color name if it's too long
+        const truncatedName = truncateText(ctx, colorName, swatchDiameter);
+
+        // Draw the truncated color name below the swatch
         ctx.fillStyle = '#000';
-        ctx.fillText(colorName, x + swatchWidth / 2, y + swatchHeight + 25);
+        ctx.fillText(truncatedName, x, y + swatchRadius + 25);
     });
 
     // Save the canvas to an image file
