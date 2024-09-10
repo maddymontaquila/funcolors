@@ -1,7 +1,7 @@
 // Import required modules
 const fs = require('fs');
 const { createCanvas } = require('canvas');
-const palette = require('palette');
+// const palette = require('palette');
 
 // Sample array of hex colors
 const hexColors = ['#FF5733', '#33FF57', '#3357FF', '#FF33A1', '#33FFF4'];
