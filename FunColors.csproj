@@ -5,12 +5,12 @@
 		<ImplicitUsings>enable</ImplicitUsings>
 		<Nullable>enable</Nullable>
 		<GeneratePackageOutputOnBuild>true</GeneratePackageOutputOnBuild>
-		<PackageVersion>1.0.1</PackageVersion>
+		<PackageVersion>1.0.2</PackageVersion>
 		<Authors>maleger</Authors>
 		<Description>More colors for your cool apps</Description>
 		<PackageIcon>FunColors.png</PackageIcon>
 		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<PackageReleaseNotes>More colors == more fun</PackageReleaseNotes>
+		<PackageReleaseNotes>Swatches + Elmo!</PackageReleaseNotes>
 		<RepositoryUrl>https://github.com/maddymontaquila/funcolors.git</RepositoryUrl>
 
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
