@@ -1,0 +1,14 @@
+{
+  "name": "generate-swatches",
+  "version": "1.0.0",
+  "description": "",
+  "main": "generate-swatches.js",
+  "dependencies": {
+    "canvas": "^2.9.0"
+  },
+  "scripts": {
+    "start": "node generate-swatches.js"
+  },
+  "author": "",
+  "license": "ISC"
+}
