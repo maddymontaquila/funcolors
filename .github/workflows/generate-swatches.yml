@@ -32,7 +32,7 @@ jobs:
       run: |
         git config --global user.name "github-actions[bot]"
         git config --global user.email "github-actions[bot]@users.noreply.github.com"
-        git diff --quiet || (git add assets/color-swatches.png && git commit -m "Update color swatches")
+        git diff --quiet HEAD || (git add assets/color-swatches.png && git commit -m "Update color swatches")
         git push
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
