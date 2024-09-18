@@ -17,7 +17,7 @@ jobs:
     - name: Checkout repository content
       uses: actions/checkout@v3
       with:
-        ref: ${{ github.event.pull_request.head.ref }} || ${{ github.ref_name }}
+        ref: ${{ github.event.pull_request.head.ref || 'main' }}
 
     - name: Set up Node.js
       uses: actions/setup-node@v2
