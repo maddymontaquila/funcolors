@@ -79,7 +79,7 @@ function generateSwatches(hexColors, outputFile) {
         const truncatedName = truncateText(ctx, colorName, swatchDiameter);
 
         // Draw the truncated color name below the swatch
-        ctx.fillStyle = '#000';
+        ctx.fillStyle = colorHex;
         ctx.fillText(truncatedName, x, y + swatchRadius + 25);
     });
 
