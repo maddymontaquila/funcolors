@@ -79,5 +79,9 @@ public static class FunColor
 
     // shrek
     public static Color ShrekGreen => Color.FromUint(0xFF009B00);
+    
+    // Beyoncé Gold
+    public static Color BeyonceGold=> Color.FromUint(0xBF8C4E);
+    public static Color BeyHiveYellow=> Color.FromUint(0xF2C230);
 
 }
